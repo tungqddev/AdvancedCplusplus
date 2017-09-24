@@ -46,5 +46,6 @@ struct Person {
 
 		cout << someoneElse.name << ", " << someoneElse.age << ", " << someoneElse.weight << endl;
 		cin.get();
+
 	return 0;
 }
