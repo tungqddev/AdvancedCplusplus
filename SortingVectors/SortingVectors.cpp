@@ -14,15 +14,15 @@ public:
 		cout << id << ": " << name << endl;
 	}
 
-	//bool operator < (const Test& other) const {
-	//	return name < other.name;
-	//}
-	friend bool camp(const Test &a, const Test &b);
+	bool operator < (const Test& other) const {
+		return name < other.name;
+	}
+	//friend bool camp(const Test &a, const Test &b);
 };
 
-bool camp(const Test &a, const Test &b) {
-	return a.name < b.name;
-}
+//bool camp(const Test &a, const Test &b) {
+//	return a.name < b.name;
+//}
 
 int main() {
 
@@ -33,7 +33,7 @@ int main() {
 	tests.push_back(Test(7, "Raj"));
 	tests.push_back(Test(3, "Vicky"));
 
-	sort(tests.begin(), tests.end(), camp);
+	sort(tests.begin(), tests.end());
 
 	for (int i = 0; i < tests.size(); i++) {
 		tests[i].print();
